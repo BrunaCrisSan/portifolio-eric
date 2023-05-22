@@ -1,0 +1,64 @@
+.ellipse {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 40rem;
+    width: 30rem;
+    background-color: var(--cor-2);
+    border-radius: 50%;
+    display: inline-block;
+    left: -25%;
+}
+
+@include responsive(m) {
+    .ellipse {
+        position: relative;
+        left: -30%;
+        width: 25rem;
+        height: 45rem;  
+    }
+}
+@include responsive(s) {
+    .ellipse {
+        position: relative;
+        left: -35%;
+        width: 25rem;
+        height: 45rem;  
+    }
+}
+@include responsive(xs) {
+    .ellipse {
+        position: relative;
+        left: -40%;
+        width: 25rem;
+        height: 45rem;  
+    }
+}
+@include responsive(xx) {
+    .ellipse {
+        position: relative;
+        left: -45%;
+        width: 25rem;
+        height: 45rem;  
+    }
+}
+
+
+
+
+.banner-foto img {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 150px;
+
+}
+
+@include responsive(m) {
+    .banner-foto img {
+        width: 360px;
+        height: auto;
+        top: 200px;
+
+    }
+}

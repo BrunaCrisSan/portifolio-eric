@@ -1,3 +1,271 @@
-.nav {
-  background: red;
+:root {
+  --cor-0: #ffffff;
+  --cor-1: rgba(62, 67, 69, 0.8);
+  --cor-2: #F56692;
+  --cor-3: rgba(0, 84, 107, 1);
+}
+
+.cor-0 {
+  color: var(--cor-0);
+}
+
+.cor-1 {
+  color: var(--cor-1);
+}
+
+.cor-2 {
+  color: var(--cor-2);
+}
+
+.cor-3 {
+  color: var(--cor-3);
+}
+
+.font-1 {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-header {
+  position: relative;
+  background-color: var(--cor-0);
+}
+
+.nav-header__div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-header__div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .nav__ul {
+    display: flex;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nav__ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  .nav__ul.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bol::before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: var(--cor-2);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav__item a {
+  display: block;
+  padding: 1.5rem 1rem;
+  color: var(--cor-1);
+}
+
+#burger {
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+  background: linear-gradient(45deg, #9682C8 10%, #05BCC9);
+  font-size: 32px;
+  padding: 16px 16px 32px 32px;
+  border-radius: 0% 0% 0% 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#quit {
+  position: fixed;
+  top: 0;
+  color: white;
+  font-size: 32px;
+  padding: 16px;
+  display: none;
+  cursor: pointer;
+}
+
+#links {
+  display: none;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+  padding: 25vh 0;
+  justify-content: space-around;
+  z-index: 9999;
+}
+
+#links a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-family: "Roboto";
+  z-index: 10;
+}
+
+.menuMobile {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 6;
+  display: none;
+}
+
+#openMenu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: var(--cor-0);
+  background: var(--cor-2);
+  font-size: 32px;
+  padding: 16px 16px 32px 32px;
+  border-radius: 0% 0% 0% 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+#closeMenu {
+  position: fixed;
+  top: 0;
+  color: var(--cor-2);
+  font-size: 32px;
+  padding: 16px;
+  display: none;
+  cursor: pointer;
+}
+
+#linksMenu {
+  display: none;
+  background-color: var(--cor-1);
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+}
+
+#linksMenu a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--cor-0);
+  font-size: 2em;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  .menuMobile {
+    display: block;
+  }
+}
+.ellipse {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 40rem;
+  width: 30rem;
+  background-color: var(--cor-2);
+  border-radius: 50%;
+  display: inline-block;
+  left: -25%;
+}
+
+@media screen and (max-width: 768px) {
+  .ellipse {
+    position: relative;
+    left: -30%;
+    width: 25rem;
+    height: 45rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ellipse {
+    position: relative;
+    left: -35%;
+    width: 25rem;
+    height: 45rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ellipse {
+    position: relative;
+    left: -40%;
+    width: 25rem;
+    height: 45rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .ellipse {
+    position: relative;
+    left: -45%;
+    width: 25rem;
+    height: 45rem;
+  }
+}
+.banner-foto img {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-foto img {
+    width: 360px;
+    height: auto;
+    top: 200px;
+  }
 }/*# sourceMappingURL=style.css.map */

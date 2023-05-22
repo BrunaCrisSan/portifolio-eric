@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <meta name="description" content="Portfólio">
-    <link rel="preload" href="" as="style">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./scss/style.css">
 </head>
+
 <body>
-    <header class="header-menu">
-        <nav class="container-nav font-1">
-            <ul class="nav-itens">
-                <li><a href="">CONHECIMENTO</a></li>
-                <li><a href="">EXPERIÊNCIAS PROFISSIONAIS</a></li>
-                <li><a href="">CONTATO</a></li>
-            </ul>
-
-        </nav>
+    <header class="nav-header">
+        <div class="nav-header__div">
+            <nav class="nav__g">
+                <div class="menuMobile">
+                    <i id="openMenu" class="material-icons">menu</i>
+                    <i id="closeMenu" class="material-icons">X</i>
+                    <div id="linksMenu">
+                        <a href="">Experiência Profissional</a>
+                        <a href="">Contato</a>
+                        <a href="">Conhecimento</a>
+                    </div>
+                </div>
+                <ul class="nav__ul">
+                    <li class="nav__item"><span class="bol"></span><a href="#">Conhecimento</a></li>
+                    <li class="nav__item"><span class="bol"></span><a href="#">Experiência Profissional</a></li>
+                    <li class="nav__item"><span class="bol"></span><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    <section class="banner-top">
+        <div class="ellipse"></div>
+        <div class="banner-foto"><img src="./image/foto.png" alt=""></div>
+
+    </section>
 
 
 
@@ -27,7 +43,8 @@
 
 
 
-    <script src="./js/plugins/simple-anime.js"></script>
-    <script src="./js/script.js"></script>
+
+    <script type="module" src="js/script.js"></script>
 </body>
+
 </html>

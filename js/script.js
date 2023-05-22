@@ -1,4 +1,7 @@
-import initnome from './';
+import {openMobile} from './modules/navmobile.js';
+import {closeMobile} from './modules/navmobile.js';
 
 
-initChamar();
+openMobile()
+
+closeMobile()

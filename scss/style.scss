@@ -1,1 +1,8 @@
-@import "./nav";
+@import "./themes/colors";
+@import "./themes/typography";
+@import "./themes/mixins";
+@import "./body";
+@import "./header/nav";
+@import "./header/menu-mobile";
+@import "./header/navmobile";
+@import "./banner/banner-top";
