@@ -1,0 +1,59 @@
+.perfil-g {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-4);
+    padding-bottom: 3.13rem;
+    margin-top: 160px;
+
+    .perfil-title {
+        color: var(--cor-0);
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.30px;
+        text-align: center;
+        margin-top: 4.38rem;
+    }
+
+    .text-perfil {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin-top: 4.38rem;
+
+        .perfil-text-left p {
+            color: var(--cor-0);
+            margin-bottom: 20px;
+        }
+
+        .perfil-text-right p {
+            color: var(--cor-0);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.bol::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: var(--cor-2);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: .63rem;
+}
+
+@include responsive(s) {
+    .perfil-g .perfil-title{
+        font-size: 18px;
+    }
+    .perfil-g .text-perfil{
+        align-items: center;
+    }
+    .text-perfil { 
+       .perfil-text-left, 
+       .perfil-text-right{
+        font-size: 10px;
+       }
+    }
+}

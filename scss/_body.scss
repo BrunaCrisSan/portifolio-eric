@@ -1,19 +1,27 @@
-body{
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
-h1,
-h2,
-h3,
-h4,
-ul,
-p{
-    margin: 0px;
-}
-ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-a{
-    text-decoration: none;
+
+body {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    p {
+        margin: 0px;
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
 }

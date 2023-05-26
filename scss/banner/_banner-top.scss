@@ -1,8 +1,15 @@
+.banner-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-x: hidden;
+}
+
 .ellipse {
     position: absolute;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
-    height: 40rem;
+    height:720px;
     width: 30rem;
     background-color: var(--cor-2);
     border-radius: 50%;
@@ -10,55 +17,156 @@
     left: -25%;
 }
 
+.banner-foto img {
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    top: 260px;
+
+}
+
+.banner-texto {
+    position: relative;
+    margin-top: 10rem;
+}
+
+.banner-texto h1 {
+    color: var(--cor-1);
+    font-weight: 700;
+}
+
+.banner-texto h2 {
+    margin-top: 1.9rem;
+    color: var(--cor-2);
+    font-weight: 700;
+}
+
+.banner-texto p {
+    margin-top: 1.9rem;
+    color: var(--cor-1);
+    font-weight: 600;
+}
+
+.btn-g {
+    display: flex;
+    margin-top: 1.9rem;
+    border: 2px solid var(--cor-2);
+    border-radius: 60px;
+    width: 9.4rem;
+    height: 2.44rem;
+    align-items: center;
+}
+
+.circle {
+    position: relative;
+    left: 2px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--cor-2);
+    border-radius: 50%;
+    align-items: center;
+
+    .download {
+        height: 1.88rem;
+    }
+}
+
+.btn-g h4 {
+    font-weight: 700;
+    padding: 8px;
+}
+
+.btn-g:hover {
+    background-color: var(--cor-2);
+}
+
+.circle:hover {
+    background-color: var(--cor-0);
+}
+
+@include responsive(m) {
+    .banner-top {
+        grid-template-columns: 1fr;
+    }
+}
+
 @include responsive(m) {
     .ellipse {
         position: relative;
         left: -30%;
-        width: 25rem;
-        height: 45rem;  
+        width: 22rem;
+        height: 45rem;
     }
 }
+
 @include responsive(s) {
     .ellipse {
         position: relative;
         left: -35%;
-        width: 25rem;
-        height: 45rem;  
+        width: 22rem;
+        height: 40rem;
     }
 }
+
 @include responsive(xs) {
     .ellipse {
         position: relative;
         left: -40%;
-        width: 25rem;
-        height: 45rem;  
+        width: 20rem;
+        height: 37rem;
     }
 }
+
 @include responsive(xx) {
     .ellipse {
         position: relative;
         left: -45%;
-        width: 25rem;
-        height: 45rem;  
+        width: 17rem;
+        height: 37rem;
     }
-}
-
-
-
-
-.banner-foto img {
-    position: absolute;
-    width: 400px;
-    height: auto;
-    top: 150px;
-
 }
 
 @include responsive(m) {
     .banner-foto img {
-        width: 360px;
+        width: 18rem;
         height: auto;
         top: 200px;
 
     }
 }
+
+@include responsive(s) {
+    .banner-foto img {
+        width: 15rem;
+        height: auto;
+        top: 200px;
+
+    }
+}
+
+@include responsive(m) {
+    .banner-texto {
+        margin-top: 3.1rem;
+        text-align: center;
+
+        h1 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .btn-g {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

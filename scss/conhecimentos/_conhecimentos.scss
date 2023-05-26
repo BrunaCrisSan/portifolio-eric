@@ -1,0 +1,62 @@
+.conhecimentos-g {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .conhecimentos-img,
+    .conhecimento-img-top,
+    .conhecimento-img-button {
+        gap: 60px;
+    }
+
+    .perfil-title {
+        text-align: center;
+        color: var(--cor-1);
+        margin-top: 60px;
+    }
+
+    .conhecimentos-img {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+        flex-wrap: wrap;
+
+        .conhecimento-img-top,
+        .conhecimento-img-button {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+.conhecimento-img-top img,
+.conhecimento-img-button img {
+    margin-top: 60px;
+    width: 8rem;
+}
+
+@include responsive(m) {
+
+    .conhecimento-img-top img,
+    .conhecimento-img-button img {
+        margin-top: 40px;
+        width: 5rem;
+    }
+}
+
+@include responsive(s) {
+    .perfil-title {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .conhecimento-img-top img,
+    .conhecimento-img-button img {
+        margin-top: 30px;
+        width: 3rem;
+    }
+
+
+}
