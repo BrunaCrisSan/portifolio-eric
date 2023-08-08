@@ -1,0 +1,24 @@
+/*
+Theme Name: Portfolio
+Theme URI: http://portfolio.com
+Author: Bru San
+Author URI: http://brusan.com/
+Description: Tema criado para Portfólio
+Version: 6.2
+*/
+
+@import "./scss/themes/colors";
+@import "./scss/themes/typography";
+@import "./scss/themes/mixins";
+@import "./scss/body";
+@import "./scss/custom-admin";
+@import "./scss/header/logo-home";
+@import "./scss/header/nav";
+@import "./scss/header/menumobile";
+@import "./scss/header/login";
+@import "./scss/banner/banner-top";
+@import "./scss/perfil/perfil";
+@import "./scss/conhecimentos/conhecimentos";
+@import "./scss/experiencia/experiencia";
+@import "./scss/contato/contato";
+@import "./scss/footer/footer";

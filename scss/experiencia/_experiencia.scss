@@ -1,0 +1,140 @@
+.article-experiencia {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-4);
+
+    .perfil-title {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        text-align: center;
+        position: relative;
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+        color: var(--cor-0);
+    }
+}
+
+.article-g {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-bottom: 1rem;
+
+    .expe-two,
+    .expe-six {
+        text-align: right;
+    }
+
+    .perfil-grid-1,
+    .perfil-grid-3,
+    .perfil-grid-5 {
+        border-left: 1px solid var(--cor-0);
+    }
+
+    .perfil-grid-6,
+    .perfil-grid-5,
+    .perfil-grid-4,
+    .perfil-grid-3,
+    .perfil-grid-2,
+    .perfil-grid-1 {
+        position: relative;
+        padding-left: 3rem;
+
+        .perfil-icon {
+            position: absolute;
+            left: -20px;
+            top: 0;
+            margin-bottom: 5rem;
+            background-color: var(--cor-2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+
+        .btn-data {
+            padding: 0.2rem 0.6rem;
+            background-color: var(--cor-4);
+            border-radius: 15px;
+            border: 1px solid var(--cor-0);
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--cor-0);
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        h2,
+        h3 {
+            padding: 0.2rem 0;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--cor-0);
+        }
+
+        p {
+            color: var(--cor-0);
+        }
+    }
+}
+
+@include responsive(s) {
+    .article-experiencia .perfil-title {
+        font-size: 18px;
+    }
+
+    .article-g {
+        grid-template-columns: repeat(1, 1fr);
+
+        .perfil-grid-6,
+        .perfil-grid-4,
+        .perfil-grid-2 {
+            padding-right: 3rem;
+
+            h2,
+            h3 {
+                padding: 0.2rem 0;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.62rem;
+            }
+
+        }
+
+        .perfil-grid-3 {
+
+            h2,
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 0.62rem;
+            }
+
+        }
+
+        .perfil-grid-5,
+        .perfil-grid-1,
+        .perfil-icon {
+            display: none;
+        }
+
+        .perfil-grid-3 .perfil-icon {
+            display: none;
+        }
+    }
+}

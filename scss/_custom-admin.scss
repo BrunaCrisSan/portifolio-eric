@@ -1,0 +1,75 @@
+#adminmenu,
+#adminmenu .wp-submenu,
+#adminmenuback,
+#adminmenuwrap {
+    background-color: #F56692;
+}
+
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+    background-color: #1d2327;
+}
+
+.wp-admin #wpadminbar #wp-admin-bar-site-name>.ab-item:before {
+    color: #f0f0f1;
+}
+
+#wpadminbar a img {
+    border-radius: 50%;
+    width: 20px;
+    margin-top: 8px;
+}
+
+#adminmenu div.wp-menu-image:before {
+    color: #1d2327;
+}
+
+#wpadminbar.mobile .quicklinks .ab-item:before {
+    color: #f0f0f1;
+}
+
+.collapse-button-icon {
+    color: #1d2327;
+}
+
+.collapse-button-label {
+    color: #f0f0f1;
+}
+
+.metabox-holder h2.hndle {
+    color: #F56692;
+}
+
+// Buttom dashboard painel
+a {
+    color: #2271b1;
+    transition-property: border, background, color;
+    transition-duration: .05s;
+    transition-timing-function: ease-in-out;
+}
+
+.button-style a {
+    text-decoration: none;
+    color: #f0f0f1;
+    font-weight: 400;
+}
+
+.button-style {
+    background-color: #F56692;
+    /* Green */
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-style:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

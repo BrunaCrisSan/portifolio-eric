@@ -5,35 +5,37 @@
 }
 
 .ellipse {
-    position: absolute;
+    position: relative;
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-    height:720px;
-    width: 30rem;
-    background-color: var(--cor-2);
-    border-radius: 50%;
+    height: 50rem;
+    width: 32rem;
+    background-color: var(--cor-4);
     display: inline-block;
-    left: -25%;
+
 }
 
 .banner-foto img {
     position: absolute;
     justify-content: flex-start;
     align-items: center;
-    width: 400px;
+    width: 500px;
     height: auto;
     top: 260px;
+    border-radius: 10px;
 
 }
 
 .banner-texto {
     position: relative;
-    margin-top: 10rem;
+    margin-top: 12rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .banner-texto h1 {
-    color: var(--cor-1);
+    color: var(--cor-4);
     font-weight: 700;
 }
 
@@ -47,11 +49,12 @@
     margin-top: 1.9rem;
     color: var(--cor-1);
     font-weight: 600;
+    white-space: break-spaces; // quebra linha
 }
 
 .btn-g {
     display: flex;
-    margin-top: 1.9rem;
+    margin-top: 3.5rem;
     border: 2px solid var(--cor-2);
     border-radius: 60px;
     width: 9.4rem;
@@ -62,8 +65,8 @@
 .circle {
     position: relative;
     left: 2px;
-    height: 35px;
-    width: 35px;
+    height: 38px;
+    width: 38px;
     background-color: var(--cor-2);
     border-radius: 50%;
     align-items: center;
@@ -86,70 +89,39 @@
     background-color: var(--cor-0);
 }
 
+@include responsive(l) {
+    .banner-texto{
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+
 @include responsive(m) {
     .banner-top {
+        justify-content: center;
+        align-items: center;
         grid-template-columns: 1fr;
     }
-}
 
-@include responsive(m) {
+    .banner-foto img {
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 25rem;
+        top: 260px;
+
+    }
+
     .ellipse {
         position: relative;
-        left: -30%;
-        width: 22rem;
+        width: 50rem;
         height: 45rem;
     }
-}
 
-@include responsive(s) {
-    .ellipse {
-        position: relative;
-        left: -35%;
-        width: 22rem;
-        height: 40rem;
-    }
-}
-
-@include responsive(xs) {
-    .ellipse {
-        position: relative;
-        left: -40%;
-        width: 20rem;
-        height: 37rem;
-    }
-}
-
-@include responsive(xx) {
-    .ellipse {
-        position: relative;
-        left: -45%;
-        width: 17rem;
-        height: 37rem;
-    }
-}
-
-@include responsive(m) {
-    .banner-foto img {
-        width: 18rem;
-        height: auto;
-        top: 200px;
-
-    }
-}
-
-@include responsive(s) {
-    .banner-foto img {
-        width: 15rem;
-        height: auto;
-        top: 200px;
-
-    }
-}
-
-@include responsive(m) {
     .banner-texto {
-        margin-top: 3.1rem;
-        text-align: center;
+        margin-top: 2.1rem;
+        margin-left: auto;
+        margin-right: auto;
 
         h1 {
             font-size: 18px;
@@ -163,10 +135,31 @@
             font-size: 12px;
         }
     }
-
-    .btn-g {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
+@include responsive(s) {
+    .banner-foto img {
+        margin-left: 45%;
+        margin-right: 45%;
+        width: 20rem;
+        top: 150px;
+
+    }
+    .ellipse {
+        width: 50rem;
+        height: 30rem;
+    }
+}
+@include responsive(xs) {
+    .banner-foto img {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 14rem;
+        
+    }
+
+    .ellipse {
+        width: 100%;
+        height: 25rem;
+    }
+}
